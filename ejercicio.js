@@ -341,74 +341,343 @@
 //   const datos = await respuesta.json();
 //   console.log(datos);
 // }
-async function cargarDatos() {
-  try {
-    const respuesta = await fetch("https://api.example.com/data");
-    const datos = await respuesta.json();
-    console.log(datos);
-  } catch (error) {
-    console.error("Error al cargar datos:", error);
+// async function cargarDatos() {
+//   try {
+//     const respuesta = await fetch("https://api.example.com/data");
+//     const datos = await respuesta.json();
+//     console.log(datos);
+//   } catch (error) {
+//     console.error("Error al cargar datos:", error);
+//   }
+// }
+
+// async function saludar() {
+//   const promesa = new Promise((resolve) => {
+//     setTimeout(() => resolve("Hola, mundo!"), 2000);
+//   });
+
+//   const mensaje = await promesa; // Espera 2 segundos.
+//   console.log(mensaje); // "Hola, mundo!"
+// }
+
+// saludar();
+
+// const mixedTypedArray = [100, true, "freeCodeCamp", {}];
+
+// const salad = ["?", "?", "?", "?", "?", "?", "?"];
+
+// const element = array[index];
+
+// const salad = ["?", "?", "?", "?", "?", "?", "?"];
+
+// for (let i = 0; i < salad.length; i++) {
+//   console.log(`Element at index ${i} is ${salad[i]}`);
+// }
+
+// const salad = ["?", "?", "?", "?", "?", "?", "?"];
+// salad.push("?");
+
+// const ensalada = ["?", "?", "?", "?", "?", "?", "?"];
+// const ensaladaCopy = ensalada.slice();
+
+// console.log(ensaladaCopy); // ['?', '?', '?', '?', '?', '?', '?']
+
+// ensalada === ensaladaCopy; // returns false
+
+// let [tomate, hongo, zanahoria] = ["?", "?", "?"];
+
+// console.log(tomate, hongo, zanahoria); // Output, ? ? ?
+
+// let frutas = ["?", "?", "?", "?", ["?", "?", "?"]];
+
+// const veg = frutas[4]; // returns the array ['?', '?', '?']
+// const zanahoria = veg[2]; // returns '?'
+
+// fruits[4][2]; // returns '?'
+
+// const objeto = new Object(); // Evitar esta sintaxis en Javascript (no se suele usar)
+
+// const objeto = {}; // Esto es un objeto vacío
+
+// const player = {
+//   name: "Manz",
+//   life: 99,
+//   power: 10,
+// };
+
+// // Notación con puntos (preferida)
+// console.log(player.name); // Muestra "Manz"
+// console.log(player.life); // Muestra 99
+
+// // Notación con corchetes
+// console.log(player["name"]); // Muestra "Manz"
+// console.log(player["life"]); // Muestra 99
+
+
+// // Operadores Aritméticos
+// let suma = 5 + 3;       // Suma: 8
+// let resta = 5 - 3;      // Resta: 2
+// let multiplicacion = 5 * 3; // Multiplicación: 15
+// let division = 5 / 3;   // División: 1.6667
+// let modulo = 5 % 3;     // Módulo: 2
+// let incremento = 5; incremento++; // Incremento: 6
+// let decremento = 5; decremento--; // Decremento: 4
+
+// // Operadores de Asignación
+// let asignacion = 5;
+// asignacion += 3; // Suma y asignación: 8
+// asignacion -= 2; // Resta y asignación: 6
+// asignacion *= 2; // Multiplicación y asignación: 12
+// asignacion /= 3; // División y asignación: 4
+// asignacion %= 3; // Módulo y asignación: 1
+
+// // Operadores de Comparación
+// let igual = (5 == "5");      // Igual a: true
+// let noIgual = (5 != "5");    // No igual a: false
+// let igualEstricto = (5 === "5"); // Igual estrictamente: false
+// let noIgualEstricto = (5 !== "5"); // No igual estrictamente: true
+// let mayorQue = (5 > 3);      // Mayor que: true
+// let menorQue = (5 < 3);      // Menor que: false
+// let mayorOIgualQue = (5 >= 5); // Mayor o igual que: true
+// let menorOIgualQue = (5 <= 5); // Menor o igual que: true
+
+// // Operadores Lógicos
+// let andLogico = (true && false); // AND lógico: false
+// let orLogico = (true || false); // OR lógico: true
+// let notLogico = !true;           // NOT lógico: false
+
+// // Operadores de Bit a Bit (Bitwise)
+// let andBit = (5 & 3);  // AND bit a bit: 1
+// let orBit = (5 | 3);   // OR bit a bit: 7
+// let xorBit = (5 ^ 3);  // XOR bit a bit: 6
+// let notBit = ~5;       // NOT bit a bit: -6
+// let desplIzq = (5 << 1); // Desplazamiento a la izquierda: 10
+// let desplDer = (5 >> 1); // Desplazamiento a la derecha: 2
+// let desplDerSinSigno = (5 >>> 1); // Desplazamiento a la derecha sin signo: 2
+
+// // Otros Operadores
+// let tipo = typeof 5;  // typeof: "number"
+// let instancia = [] instanceof Array; // instanceof: true
+// let operadorTernario = (5 > 3) ? "Mayor" : "Menor"; // Operador ternario: "Mayor"
+
+// const Persona = {
+//   name: "Johan",
+//   apellido: "Delgado"
+
+// }
+
+// Persona.pais = "Colombia";
+
+// Persona.mostrarPais = (function () {
+//   return `Mi pais es ${this.pais}`;
+// })
+
+// console.log(Persona);
+
+// // If-Else
+// let numero = 5;
+// if (numero > 0) {
+//     console.log("El número es positivo");
+// } else {
+//     console.log("El número es negativo");
+// }
+
+// // Else If
+// let hora = 10;
+// if (hora < 12) {
+//     console.log("Buenos días");
+// } else if (hora < 18) {
+//     console.log("Buenas tardes");
+// } else {
+//     console.log("Buenas noches");
+// }
+
+// // Ternario
+// let edad = 18;
+// let esMayorDeEdad = (edad >= 18) ? "Mayor de edad" : "Menor de edad";
+// console.log(esMayorDeEdad);
+
+
+// // Try-Catch
+// try {
+  //     let resultado = noExiste / 10; // Esto lanzará un error porque 'noExiste' no está definida
+  // } catch (error) {
+//     console.log("Se ha producido un error: " + error.message);
+// }
+
+// let a = 25;
+// let b = 2;
+// let c = 7;
+
+// let resultado = a + (b + (b - a) * a) / c;
+
+// console.log(resultado);
+
+
+// if (typeof (a && b) === "number" ) {
+  //   console.log(a + b);
+  // }
+  // else{
+    //   console.log("False");
+  
+    // }
+    
+    
+    // // While
+    // let contador = 0;
+    // while (contador < 5) {
+      //     console.log("Contador (while): " + contador);
+      //     contador++;
+      // }
+      
+      // // Do-While
+      // let num = 0;
+      // do {
+        //     console.log("Número (do-while): " + num);
+        //     num++;
+        // } while (num < 5);
+        
+        // // For
+        // for (let i = 0; i < 5; i++) {
+          //     console.log("Índice (for): " + i);
+          // }
+          
+          // // For-In
+          // const objeto = {a: 1, b: 2, c: 3};
+          // for (let propiedad in objeto) {
+            //     console.log("Propiedad (for-in): " + propiedad + " = " + objeto[propiedad]);
+            // }
+            
+            // // For-Of
+            // const array = [1, 2, 3, 4, 5];
+            // for (let valor of array) {
+              //     console.log("Valor (for-of): " + valor);
+              // }
+              
+              // // Try-Catch
+              // try {
+                //   let resultado = 10 / 0; // Esto no lanzará un error, pero resultado será Infinity
+                //   console.log(resultado);
+                //   let error = noExiste; // Esto lanzará un error porque 'noExiste' no está definida
+                // } catch (error) {
+                  //   console.log("Se ha producido un error: " + error.message);
+                  // }
+                  
+                  // // Finally
+                  // try {
+                    //   let resultado = 10 / 0;
+                    //   console.log(resultado);
+                    // } catch (error) {
+                      //   console.log("Se ha producido un error: " + error.message);
+                      // } finally {
+                        //   console.log("Este bloque siempre se ejecutará");
+// }
+
+
+// // Throw
+// try {
+//   let edad = -5;
+//   if (edad < 0) {
+//       throw new Error("La edad no puede ser negativa");
+//   }
+// } catch (error) {
+//   console.log("Se ha producido un error: " + error.message);
+// } finally {
+//   console.log("Validación de edad completada");
+// }
+
+
+// // Break
+// for (let i = 0; i < 10; i++) {
+//   if (i === 5) {
+//       break; // Sale del ciclo cuando i es igual a 5
+//   }
+//   console.log("Valor con break: " + i);
+// }
+
+// // Continue
+// for (let i = 0; i < 10; i++) {
+//   if (i % 2 === 0) {
+//       continue; // Salta la iteración actual si i es un número par
+//   }
+//   console.log("Valor con continue: " + i);
+// }
+
+// // Switch
+// let dia = 3;
+// switch (dia) {
+//     case 0:
+//         console.log("Domingo");
+//         break;
+//     case 1:
+//         console.log("Lunes");
+//         break;
+//     case 2:
+//         console.log("Martes");
+//         break;
+//     case 3:
+//         console.log("Miércoles");
+//         break;
+//     case 4:
+//         console.log("Jueves");
+//         break;
+//     case 5:
+//         console.log("Viernes");
+//         break;
+//     case 6:
+//         console.log("Sábado");
+//         break;
+//     default:
+//         console.log("Día inválido");
+// }
+
+// let contador = 0;
+// for (let i = 0; contador <= 20; i++) {
+//   if(i % 2 === 0){
+//     console.log(i);
+//     contador++;
+//   }
+// }
+
+// for (let i = 0; i <= 20; i++) {
+//   console.log(i * 2);
+//   if (i == 4) {
+//     console.log(9);
+//   }
+// }
+
+
+let primo = 0;
+for (let i = 0; primo <= 10; i++) {
+  for (let a = 0; a < i; a++) {
+    if (i % a != 0 || i < 3){
+      console.log(i);
+      primo++;
+      break;
+    }
   }
 }
 
-async function saludar() {
-  const promesa = new Promise((resolve) => {
-    setTimeout(() => resolve("Hola, mundo!"), 2000);
-  });
 
-  const mensaje = await promesa; // Espera 2 segundos.
-  console.log(mensaje); // "Hola, mundo!"
-}
 
-saludar();
 
-const mixedTypedArray = [100, true, "freeCodeCamp", {}];
 
-const salad = ["?", "?", "?", "?", "?", "?", "?"];
 
-const element = array[index];
 
-const salad = ["?", "?", "?", "?", "?", "?", "?"];
 
-for (let i = 0; i < salad.length; i++) {
-  console.log(`Element at index ${i} is ${salad[i]}`);
-}
 
-const salad = ["?", "?", "?", "?", "?", "?", "?"];
-salad.push("?");
 
-const ensalada = ["?", "?", "?", "?", "?", "?", "?"];
-const ensaladaCopy = ensalada.slice();
 
-console.log(ensaladaCopy); // ['?', '?', '?', '?', '?', '?', '?']
 
-ensalada === ensaladaCopy; // returns false
 
-let [tomate, hongo, zanahoria] = ["?", "?", "?"];
 
-console.log(tomate, hongo, zanahoria); // Output, ? ? ?
 
-let frutas = ["?", "?", "?", "?", ["?", "?", "?"]];
 
-const veg = frutas[4]; // returns the array ['?', '?', '?']
-const zanahoria = veg[2]; // returns '?'
 
-fruits[4][2]; // returns '?'
 
-const objeto = new Object(); // Evitar esta sintaxis en Javascript (no se suele usar)
 
-const objeto = {}; // Esto es un objeto vacío
 
-const player = {
-  name: "Manz",
-  life: 99,
-  power: 10,
-};
 
-// Notación con puntos (preferida)
-console.log(player.name); // Muestra "Manz"
-console.log(player.life); // Muestra 99
 
-// Notación con corchetes
-console.log(player["name"]); // Muestra "Manz"
-console.log(player["life"]); // Muestra 99
+
+
