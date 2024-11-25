@@ -640,16 +640,7 @@
 //   }
 // }
 
-let primo = 0;
-for (let i = 0; primo < 10; i++) {
-  let divisores = 0;
-  for (let a = 1; a <= i; a++) {
-    if (i % a === 0) {
-      divisores++;
-    }
-  }
-  if (i <= 3 || divisores === 2) {
-    console.log(i);
-    primo++;
-  }
-}
+
+
+
+
