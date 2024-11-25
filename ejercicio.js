@@ -413,7 +413,6 @@
 // console.log(player["name"]); // Muestra "Manz"
 // console.log(player["life"]); // Muestra 99
 
-
 // // Operadores Aritméticos
 // let suma = 5 + 3;       // Suma: 8
 // let resta = 5 - 3;      // Resta: 2
@@ -497,11 +496,10 @@
 // let esMayorDeEdad = (edad >= 18) ? "Mayor de edad" : "Menor de edad";
 // console.log(esMayorDeEdad);
 
-
 // // Try-Catch
 // try {
-  //     let resultado = noExiste / 10; // Esto lanzará un error porque 'noExiste' no está definida
-  // } catch (error) {
+//     let resultado = noExiste / 10; // Esto lanzará un error porque 'noExiste' no está definida
+// } catch (error) {
 //     console.log("Se ha producido un error: " + error.message);
 // }
 
@@ -513,66 +511,63 @@
 
 // console.log(resultado);
 
-
 // if (typeof (a && b) === "number" ) {
-  //   console.log(a + b);
-  // }
-  // else{
-    //   console.log("False");
-  
-    // }
-    
-    
-    // // While
-    // let contador = 0;
-    // while (contador < 5) {
-      //     console.log("Contador (while): " + contador);
-      //     contador++;
-      // }
-      
-      // // Do-While
-      // let num = 0;
-      // do {
-        //     console.log("Número (do-while): " + num);
-        //     num++;
-        // } while (num < 5);
-        
-        // // For
-        // for (let i = 0; i < 5; i++) {
-          //     console.log("Índice (for): " + i);
-          // }
-          
-          // // For-In
-          // const objeto = {a: 1, b: 2, c: 3};
-          // for (let propiedad in objeto) {
-            //     console.log("Propiedad (for-in): " + propiedad + " = " + objeto[propiedad]);
-            // }
-            
-            // // For-Of
-            // const array = [1, 2, 3, 4, 5];
-            // for (let valor of array) {
-              //     console.log("Valor (for-of): " + valor);
-              // }
-              
-              // // Try-Catch
-              // try {
-                //   let resultado = 10 / 0; // Esto no lanzará un error, pero resultado será Infinity
-                //   console.log(resultado);
-                //   let error = noExiste; // Esto lanzará un error porque 'noExiste' no está definida
-                // } catch (error) {
-                  //   console.log("Se ha producido un error: " + error.message);
-                  // }
-                  
-                  // // Finally
-                  // try {
-                    //   let resultado = 10 / 0;
-                    //   console.log(resultado);
-                    // } catch (error) {
-                      //   console.log("Se ha producido un error: " + error.message);
-                      // } finally {
-                        //   console.log("Este bloque siempre se ejecutará");
+//   console.log(a + b);
+// }
+// else{
+//   console.log("False");
+
 // }
 
+// // While
+// let contador = 0;
+// while (contador < 5) {
+//     console.log("Contador (while): " + contador);
+//     contador++;
+// }
+
+// // Do-While
+// let num = 0;
+// do {
+//     console.log("Número (do-while): " + num);
+//     num++;
+// } while (num < 5);
+
+// // For
+// for (let i = 0; i < 5; i++) {
+//     console.log("Índice (for): " + i);
+// }
+
+// // For-In
+// const objeto = {a: 1, b: 2, c: 3};
+// for (let propiedad in objeto) {
+//     console.log("Propiedad (for-in): " + propiedad + " = " + objeto[propiedad]);
+// }
+
+// // For-Of
+// const array = [1, 2, 3, 4, 5];
+// for (let valor of array) {
+//     console.log("Valor (for-of): " + valor);
+// }
+
+// // Try-Catch
+// try {
+//   let resultado = 10 / 0; // Esto no lanzará un error, pero resultado será Infinity
+//   console.log(resultado);
+//   let error = noExiste; // Esto lanzará un error porque 'noExiste' no está definida
+// } catch (error) {
+//   console.log("Se ha producido un error: " + error.message);
+// }
+
+// // Finally
+// try {
+//   let resultado = 10 / 0;
+//   console.log(resultado);
+// } catch (error) {
+//   console.log("Se ha producido un error: " + error.message);
+// } finally {
+//   console.log("Este bloque siempre se ejecutará");
+// }
 
 // // Throw
 // try {
@@ -585,7 +580,6 @@
 // } finally {
 //   console.log("Validación de edad completada");
 // }
-
 
 // // Break
 // for (let i = 0; i < 10; i++) {
@@ -646,38 +640,16 @@
 //   }
 // }
 
-
 let primo = 0;
-for (let i = 0; primo <= 10; i++) {
-  for (let a = 0; a < i; a++) {
-    if (i % a != 0 || i < 3){
-      console.log(i);
-      primo++;
-      break;
+for (let i = 0; primo < 10; i++) {
+  let divisores = 0;
+  for (let a = 1; a <= i; a++) {
+    if (i % a === 0) {
+      divisores++;
     }
   }
+  if (i <= 3 || divisores === 2) {
+    console.log(i);
+    primo++;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
