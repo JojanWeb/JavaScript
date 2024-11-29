@@ -50,11 +50,11 @@
 // console.log(numero);
 
 
-const Persona = {
-    nombre : "Johan",
-    apellido : "Delgado"
-}
+// const Persona = {
+//     nombre : "Johan",
+//     apellido : "Delgado"
+// }
 
-let {nombre:a2, apellido, username = "Zzaibor"} = Persona;
+// let {nombre:a2, apellido, username = "Zzaibor"} = Persona;
 
-console.log(Persona);
+// console.log(Persona);
